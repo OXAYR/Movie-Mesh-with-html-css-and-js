@@ -49,20 +49,16 @@ function fetchAndDisplayMovies() {
 
                 buyButton.addEventListener("click", function(event){
                     event.preventDefault();
-
                     
-                    const existingCartItem = cart.find(item => item.id === movie.id);
-
+                    const existingCartItem = cart.find(item => item.cart.id === movie.id);
+                
                     if (existingCartItem) {
-                        if(existingCartItem.ticket < 5){
-
-                            existingCartItem.ticket += 1;
-                        }
-                        else{
-                            alert("U cannot add more than 5 tickets of a movie")
+                        if (existingCartItem.cart.ticket < 5) {
+                            existingCartItem.cart.ticket += 1;
+                        } else {
+                            alert("You cannot add more than 5 tickets of a movie");
                         }
                     } else {
-                        
                         const cartElement = {
                             id: movie.id,
                             name: movie.name,
@@ -70,13 +66,21 @@ function fetchAndDisplayMovies() {
                             price: movie.price,
                             ticket: 1
                         };
-                        cart.push(cartElement);
+                
+                        const {_id} = JSON.parse(localStorage.getItem("User")); 
+                
+                        const userCart = {
+                            userId: _id,
+                            cart: cartElement
+                        };
+                
+                        cart.push(userCart);
                     }
-
+                
                     localStorage.setItem('cart', JSON.stringify(cart));
-
                     console.log("element in the cart------>", cart);
                 });
+                
 
                 cardBody.appendChild(cardTitle);
                 cardBody.appendChild(cardText);
