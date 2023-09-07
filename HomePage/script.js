@@ -50,11 +50,11 @@ function fetchAndDisplayMovies() {
                 buyButton.addEventListener("click", function(event){
                     event.preventDefault();
 
-                    // Check if the movie is already in the cart by its id
+                    
                     const existingCartItem = cart.find(item => item.id === movie.id);
 
                     if (existingCartItem) {
-                        if(existingCartItem.ticket <= 5){
+                        if(existingCartItem.ticket < 5){
 
                             existingCartItem.ticket += 1;
                         }
@@ -62,7 +62,7 @@ function fetchAndDisplayMovies() {
                             alert("U cannot add more than 5 tickets of a movie")
                         }
                     } else {
-                        // If it's a new movie, add it to the cart with a ticket count of 1
+                        
                         const cartElement = {
                             id: movie.id,
                             name: movie.name,
@@ -73,7 +73,6 @@ function fetchAndDisplayMovies() {
                         cart.push(cartElement);
                     }
 
-                    // Update the cart in local storage
                     localStorage.setItem('cart', JSON.stringify(cart));
 
                     console.log("element in the cart------>", cart);
