@@ -5,36 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Settings</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <div class="min-h-screen flex justify-center items-center">
-        <div class="account-settings">
-            <h1 class="account-settings__title">Account Settings</h1>
+        <div class="account-settings container card">
+            <h1 >Account Settings</h1>
+            <div >
+                <p id="email-field" class="text-grey"></p>
+            </div>
 
-            <div class="account-settings__input-group">
-                <label class="account-settings__label" for="name-input">Name:</label>
+            <div >
                 <input
-                    class="account-settings__input"
+                    type="name"
                     id="name-input"
+                    placeholder="New Name"
                 />
             </div>
 
-            <div class="account-settings__input-group">
-                <label class="account-settings__label">Email:</label>
-                <p class="account-settings__email"></p>
-            </div>
 
-            <div class="account-settings__input-group">
-                <label class="account-settings__label" for="new-password-input">New Password</label>
+            <div >
                 <input
-                    class="account-settings__input"
+                    type="password"
                     id="new-password-input"
+                    placeholder="New Password"
                 />
             </div>
 
             <button
                 id="update-button"
-                class="account-settings__update-button"
+                class="button blue-button"
             >
                 Update
             </button>
@@ -43,3 +44,4 @@
     <script src="./editUser.js"></script>
 </body>
 </html>
+

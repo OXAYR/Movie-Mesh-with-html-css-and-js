@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
     
     if (userCartData.length > 0) {
         const cartDiv = document.createElement('div');
-        cartDiv.classList.add('mx-32', 'my-32', 'text-silver');
+        cartDiv.classList.add('cart', 'mx-32', 'my-32', 'text-silver');
     
         const header = document.createElement('h1');
         header.classList.add('font-bold', 'text-3xl', 'text-left');
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(){
         cartDiv.appendChild(header);
     
         const itemList = document.createElement('ul');
-        itemList.classList.add('p-4', 'mt-4', 'card', 'divide-y', 'divide-slate-300', 'text-left', 'shadow-md', 'bg-blue');
+        itemList.classList.add('p-4', 'mt-4', 'divide-y', 'divide-slate-300', 'text-left', 'shadow-md', 'bg-blue');
     
         userCartData.forEach(item => {
             const listItem = document.createElement('li');
@@ -38,13 +38,13 @@ document.addEventListener("DOMContentLoaded", function(){
             itemDetails.appendChild(itemQuantity);
     
             const removeButtonContainer = document.createElement('div');
-        removeButtonContainer.classList.add('col-span-3', 'flex', 'flex-col', 'items-end', 'py-2', 'mt-4');
+            removeButtonContainer.classList.add('col-span-3', 'flex', 'flex-col', 'items-end', 'py-2', 'mt-4');
 
-        const removeButton = document.createElement('button');
-        removeButton.classList.add('text-darkBlue', 'bg-silver', 'font-medium', 'text-md', 'text-center', 'rounded-full', 'px-2', 'm-3');
-        removeButton.textContent = 'x';
+            const removeButton = document.createElement('button');
+            removeButton.classList.add('text-darkBlue', 'bg-silver', 'font-medium', 'text-md', 'text-center', 'rounded-full', 'px-2', 'm-3');
+            removeButton.textContent = 'x';
 
-        removeButtonContainer.appendChild(removeButton);
+            removeButtonContainer.appendChild(removeButton);
 
             removeButton.addEventListener("click", function(event) {
                 event.preventDefault();
@@ -67,10 +67,8 @@ document.addEventListener("DOMContentLoaded", function(){
             itemList.appendChild(listItem);
         });
     
-        
         cartDiv.appendChild(itemList);
     
-        
         container.appendChild(cartDiv);
     } else {
         
@@ -90,5 +88,4 @@ document.addEventListener("DOMContentLoaded", function(){
     
         container.appendChild(emptyCartMessage);
     }
-})
-
+});

@@ -19,26 +19,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function displayUserData(userData) {
         var tableBody = document.getElementById("userTableBody");
-
-        
+    
         tableBody.innerHTML = "";
-
+    
+        // Create table headers
+        var tableHeaderRow = document.createElement("tr");
+    
+        var nameHeader = document.createElement("th");
+        nameHeader.textContent = "Name";
+        tableHeaderRow.appendChild(nameHeader);
+    
+        var emailHeader = document.createElement("th");
+        emailHeader.textContent = "Email";
+        tableHeaderRow.appendChild(emailHeader);
+    
+        var roleHeader = document.createElement("th");
+        roleHeader.textContent = "User Role";
+        tableHeaderRow.appendChild(roleHeader);
+    
+        tableBody.appendChild(tableHeaderRow);
     
         userData.forEach(function (user) {
             var row = document.createElement("tr");
-
+    
             var name = document.createElement("td");
             name.textContent = user.name;
             row.appendChild(name);
-
+    
             var email = document.createElement("td");
             email.textContent = user.email;
             row.appendChild(email);
-
+    
             var userRole = document.createElement("td");
-            
+    
             var dropDown = document.createElement("select");
-            dropDown.className = "border border-gray-300 rounded-md p-1 mr-2";
+            dropDown.className = "user-role-dropdown"; // Add the class for the dropdown
             var userOption = document.createElement("option");
             userOption.value = "user";
             userOption.textContent = "User";
@@ -50,22 +65,19 @@ document.addEventListener("DOMContentLoaded", function () {
             dropDown.value = user.userRole;
             dropDown.addEventListener("change", function (event) {
                 event.preventDefault();
-                console.log("User role before edit---->",user.userRole)
-                console.log("User id------>", user._id)
+                console.log("User role before edit---->", user.userRole);
+                console.log("User id------>", user._id);
                 user.userRole = dropDown.value;
-                editRole(user._id, user.userRole)
-                console.log("User role after edit---->",user.userRole)
+                editRole(user._id, user.userRole);
+                console.log("User role after edit---->", user.userRole);
             });
             userRole.appendChild(dropDown);
             row.appendChild(userRole);
-
     
             tableBody.appendChild(row);
         });
     }
-
     
-
     fetchUserData();
 
     

@@ -1,74 +1,56 @@
-
-.card {
-    margin-top: 32px;
-    padding: 44px 32px;
-    max-width: 20rem;
-    margin-left: auto;
-    margin-right: auto;
+body {
+    background-color: #f8f9fa;
+    font-family: 'Cinzel', serif; 
 }
 
-
-.text-center {
+.login-container {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10vh; 
     text-align: center;
 }
 
-
-input[type="email"],
-input[type="password"] {
-    margin-top: 4px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.text-red {
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    font-size: 0.9rem;
+    border: none;
+    border-bottom: 2px solid #007bff;
+    border-radius: 0;
+    width: 90%; 
+    height: 45px; 
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #0056b3;
+    box-shadow: none;
+}
+
+.login-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 0; 
+    margin-top: 20px;
+    width: 60%; 
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.text-red{
     color: red;
-    font-size: 14px;
 }
-
-
-button {
-    margin-top: 4px;
-    padding: 8px 112px; 
-    background-color: #3490dc;
-    color: white;
-    border: none;
-    border-radius: 9999px; 
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #38a169;
-}
-
-
-a.block {
-    margin-top: 8px;
-}
-
-button.Register {
-    padding: 8px 112px; 
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 9999px; 
-    cursor: pointer;
-}
-
-button.Register:hover {
-    background-color: #ccc;
-}
-
-
-button p {
-    font-family: serif;
-    text-align: center;
-}
-
-.ml-2 {
-    margin-left: 8px;
-}
-
-
-

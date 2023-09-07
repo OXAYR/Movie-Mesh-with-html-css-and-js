@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function (){
 
     const updateButton = document.getElementById("update-button")
-    let { _id } = JSON.parse(localStorage.getItem("User"));
+    const emailInput = document.getElementById('email-field');
+    let { _id,email } = JSON.parse(localStorage.getItem("User"));
+    emailInput.innerHTML = email
 
     updateButton.addEventListener("click", function (event) {
         event.preventDefault();
