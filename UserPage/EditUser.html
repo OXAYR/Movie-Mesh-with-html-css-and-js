@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="min-h-screen flex justify-center items-center">
+        <div class="account-settings">
+            <h1 class="account-settings__title">Account Settings</h1>
+
+            <div class="account-settings__input-group">
+                <label class="account-settings__label" for="name-input">Name:</label>
+                <input
+                    class="account-settings__input"
+                    id="name-input"
+                />
+            </div>
+
+            <div class="account-settings__input-group">
+                <label class="account-settings__label">Email:</label>
+                <p class="account-settings__email"></p>
+            </div>
+
+            <div class="account-settings__input-group">
+                <label class="account-settings__label" for="new-password-input">New Password</label>
+                <input
+                    class="account-settings__input"
+                    id="new-password-input"
+                />
+            </div>
+
+            <button
+                id="update-button"
+                class="account-settings__update-button"
+            >
+                Update
+            </button>
+        </div>
+    </div>
+    <script src="./editUser.js"></script>
+</body>
+</html>

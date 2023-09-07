@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <script type="module" src="../Api/user.js"></script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="card mt-32 p-9 font-serif max-w-md mx-auto">
+        <h2 class="text-3xl font-medium text-center">Sign Up</h2>
+        <form id="signup-form">
+            <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                class="mt-4 p-2 border border-gray-300 rounded-md w-full"
+            />
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                class="mt-4 p-2 border border-gray-300 rounded-md w-full"
+            />
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                class="mt-4 p-2 border border-gray-300 rounded-md w-full"
+            />
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm Password"
+                class="mt-4 p-2 border border-gray-300 rounded-md w-full"
+            />
+        </form>
+        <p id="validationErrors" class="text-red text-sm"></p>
+        <a><button
+            id="signup-button"
+            class="mt-4 px-40 py-2 text-white bg-blue hover:bg-lightBlue rounded-full"
+        >
+            Register
+        </button>
+        </a>
+    </div>
+
+    
+    <script type="module" src="./script.js"></script>
+    
+</body>
+</html>

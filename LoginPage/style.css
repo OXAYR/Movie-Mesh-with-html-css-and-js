@@ -1,0 +1,74 @@
+
+.card {
+    margin-top: 32px;
+    padding: 44px 32px;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+
+input[type="email"],
+input[type="password"] {
+    margin-top: 4px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.text-red {
+    color: red;
+    font-size: 14px;
+}
+
+
+button {
+    margin-top: 4px;
+    padding: 8px 112px; 
+    background-color: #3490dc;
+    color: white;
+    border: none;
+    border-radius: 9999px; 
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #38a169;
+}
+
+
+a.block {
+    margin-top: 8px;
+}
+
+button.Register {
+    padding: 8px 112px; 
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 9999px; 
+    cursor: pointer;
+}
+
+button.Register:hover {
+    background-color: #ccc;
+}
+
+
+button p {
+    font-family: serif;
+    text-align: center;
+}
+
+.ml-2 {
+    margin-left: 8px;
+}
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Movie Page</title>
+    <link rel="stylesheet" href="./style.css"> 
+</head>
+<body>
+    
+<div class="card">
+    <h2 class="font-bold text-center mb-4">Edit movie</h2>
+    <div class="w-full max-w-md">
+        <label class="block font-semibold mb-2">Title:</label>
+        <input
+            id="title-field"
+            type="text"
+            class="input-field" 
+        />
+        <label class="block font-semibold mb-2">Released on:</label>
+        <input
+            type="date"
+            id="date-field"
+            class="input-field" 
+        />
+        <button
+            type="submit"
+            class="button" 
+            id="update-button"
+        >
+            Update Movie
+        </button>
+    </div>
+</div>
+    <script src="./editMovie.js"></script>
+</body>
+</html>

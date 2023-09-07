@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="bg-navblue p-4 text-left my-4 rounded">
+        <h1 class="text-3xl font-bold text-silver">
+            Welcome Back, Admin
+        </h1>
+        <p class="text-sm font-medium text-silver">
+            Here you can create, edit and delete movies
+        </p>
+    </div>
+
+    <div class="flex justify-between">
+        
+        <div class="ml-4">
+            <h1 class="font-bold text-3xl text-left my-5 text-silver">Create A Movie</h1>
+            <div class="my-5 flex flex-col items-center">
+        
+                <div class="max-w-md flex flex-wrap justify-between w-full bg-blue rounded-lg shadow-md p-6">
+                    <div class="mb-4 w-full">
+                        <label for="title" class="block text-sm font-bold text-silver">Title</label>
+                        <input
+                            type="text"
+                            id="title"
+                            class="mt-1 p-2 block w-full border border-gray-300 rounded-md"
+                            placeholder="Enter title"
+                        />
+                    </div>
+                    <div class="mb-4 w-1/2 pr-2">
+                        <label for="ticketCount" class="block text-sm font-bold text-silver">Ticket Count</label>
+                        <input
+                            type="number"
+                            id="ticketCount"
+                            class="mt-1 p-2 block w-full border border-gray-300 rounded-md"
+                            placeholder="Enter ticket count"
+                        />
+                    </div>
+                    <div class="mb-4 w-1/2 pl-2">
+                        <label for="released_on" class="block text-sm font-bold text-silver">Released On</label>
+                        <input
+                            type="date"
+                            id="released_on"
+                            class="mt-1 p-2 block w-full border border-gray-300 rounded-md"
+                        />
+                    </div>
+                    <button
+                        class="mt-4 w-full py-2 bg-lightBlue font-bold rounded-full text-white font-serif hover:bg-lightestBlue"
+                        id="create-button"
+                    >
+                        Create
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="ml-4">
+            <h1 class="font-bold text-silver text-3xl text-left">Movies</h1>
+    
+            <div id="list" class="grid grid-cols-4 gap-4 mt-6"></div>
+    
+            <div v-else class="flex flex-col items-center justify-center text-center">
+                <div>
+                    <img
+                        src="../assets/undraw_no_data_re_kwbl.svg"
+                        alt="no products"
+                        class="max-w-full h-auto max-h-48 mx-auto drop-shadow-lg"
+                    />
+                </div>
+                <p class="font-semibold mt-2">No Movies Available</p>
+            </div>
+        </div>
+        <h1 class="font-bold text-3xl my-20 text-left">Users</h1>
+        <div class="flex flex-row font-bold divide-x divide-lightestBlue">
+            <div class="w-1/3 p-2">Name</div>
+            <div class="w-1/3 p-2">Email</div>
+            <div class="w-1/3 p-2">User Role</div>
+        </div>
+        <div class="my-2">
+            <table>
+                <tbody id="userTableBody">
+                    <!-- User data will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./createMovie.js"></script>
+    <script src="./readMovies.js"></script>
+    <script src="./user.js"></script>
+</body>
+</html>
+
+
