@@ -43,6 +43,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         const response = JSON.parse(xhr.responseText);
                         console.log("Response after authentication------>",response.data.token)
                         localStorage.setItem("UserAuth",response.data.token )
+                        console.log("Response after the user --->", response.data.user.userRole)
+                        if(response.data.user.userRole.toLowerCase() == "user"){
+                            window.location.href = "../HomePage/HomePage.html"
+                        }
+                        else{
+                            window.location.href = "../AdminPage/Admin.html"
+                        }
                         localStorage.setItem("User",JSON.stringify(response.data.user))
                         alert("Registration successful!");
                     } else {

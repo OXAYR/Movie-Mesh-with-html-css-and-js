@@ -76,6 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                     header.textContent = `MY CART (${userCartData.length}) - Total: Rs.${calculateTotal(userCartData).toFixed(2)}`;
                 }
+                else{
+                    alert("Cannot add more than 5 tickets to a movie")
+                }
             });
 
             decreaseButton.addEventListener("click", function (event) {
