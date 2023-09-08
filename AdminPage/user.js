@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
         tableBody.innerHTML = "";
     
-        // Create table headers
+        
         var tableHeaderRow = document.createElement("tr");
     
         var nameHeader = document.createElement("th");
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var userRole = document.createElement("td");
     
             var dropDown = document.createElement("select");
-            dropDown.className = "user-role-dropdown"; // Add the class for the dropdown
+            dropDown.className = "user-role-dropdown"; 
             var userOption = document.createElement("option");
             userOption.value = "user";
             userOption.textContent = "User";
