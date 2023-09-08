@@ -9,36 +9,39 @@
     
 </head>
 <body>
-    <div class="min-h-screen flex justify-center items-center account-settings ">
-        <div class="bg-white p-8 rounded shadow-md w-96 container">
+    <div class="menu-bar" id="menu-bar"></div>
+    <div class="min-h-screen flex justify-center items-center">
+        <div class="bg-white p-8 rounded shadow-md w-96 container account-settings">
             <h1 class="text-2xl font-semibold mb-4">Account Settings</h1>
-
+    
             <div class="mb-4">
                 <label class="block font-semibold mb-2">Name:</label>
                 <p class="bg-grey p-2 rounded" id="name-field"></p>
             </div>
-
+    
             <div class="mb-4">
                 <label class="block font-semibold mb-2">Email:</label>
                 <p class="bg-grey p-2 rounded" id="email-field"></p>
             </div>
+    
             <a href="./EditUser.html">
-            <button
-                id="edit-button"
-                class="blue-button button"
-            >
-                Edit
-            </button>
+                <button
+                    id="edit-button"
+                    class="edit-button button"
+                >
+                    Edit
+                </button>
             </a>
-            
+    
             <button
                 id="delete-button"
-                class="red-button button"
+                class="delete-account-button button"
             >
                 Delete Account
             </button>
         </div>
     </div>
+    
     <script src="./deleteUser.js"></script>
 </body>
 </html>

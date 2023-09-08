@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", fetchAndDisplayMovies);
+fetch('../navbar/dist/index.html')
+            .then(response => response.text())
+            .then(navbarHTML => {
+                document.getElementById('menu-bar').innerHTML = navbarHTML;
+            })
+            .catch(error => console.error(error));
+            
 
 function fetchAndDisplayMovies() {
     console.log("click occurred");
@@ -44,7 +51,7 @@ function fetchAndDisplayMovies() {
                 cardText.textContent = `Released on: ${movie.released_on}, Price: ${movie.price}, Seats: ${movie.seats}`;
 
                 const buyButton = document.createElement("button");
-                buyButton.className = "btn btn-primary";
+                buyButton.className = "btn btn-buy";
                 buyButton.textContent = "BUY";
 
                 buyButton.addEventListener("click", function(event){

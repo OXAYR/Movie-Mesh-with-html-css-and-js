@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", function (){
 
-
+    fetch('../navbar/dist/index.html')
+    .then(response => response.text())
+    .then(navbarHTML => {
+        document.getElementById('menu-bar').innerHTML = navbarHTML;
+    })
+    .catch(error => console.error(error));
 
     const deleteButton = document.getElementById("delete-button")
     let { _id, name, email } = JSON.parse(localStorage.getItem("User"));

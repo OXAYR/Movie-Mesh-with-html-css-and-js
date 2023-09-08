@@ -1,5 +1,13 @@
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    fetch('../navbar/dist/index.html')
+    .then(response => response.text())
+    .then(navbarHTML => {
+        document.getElementById('menu-bar').innerHTML = navbarHTML;
+    })
+    .catch(error => console.error(error));
+
     
     const cartData = JSON.parse(localStorage.getItem('cart'));
 

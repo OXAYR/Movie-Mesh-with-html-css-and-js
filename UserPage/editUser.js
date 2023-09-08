@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", function (){
 
+    fetch('../navbar/dist/index.html')
+    .then(response => response.text())
+    .then(navbarHTML => {
+        document.getElementById('menu-bar').innerHTML = navbarHTML;
+    })
+    .catch(error => console.error(error));
+
+
     const updateButton = document.getElementById("update-button")
     const emailInput = document.getElementById('email-field');
     let { _id,email } = JSON.parse(localStorage.getItem("User"));

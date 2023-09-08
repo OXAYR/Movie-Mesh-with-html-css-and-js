@@ -8,7 +8,7 @@ body {
     max-width: 350px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #eeeeee;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin-top: 10vh;
@@ -25,7 +25,7 @@ input[type="email"],
 input[type="password"] {
     font-size: 0.9rem;
     border: none;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #ef816c;
     border-radius: 0;
     width: 90%;
     height: 45px;
@@ -34,7 +34,7 @@ input[type="password"] {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-    border-color: #0056b3;
+    border-color: #ef816c;
     box-shadow: none;
 }
 
@@ -50,12 +50,12 @@ button {
 
 
 .signup-button {
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: #ef816c;
+    color: #eeeeee;
 }
 
 .signup-button:hover {
-    background-color: #0056b3;
+    background-color: #f45e41;
 }
 .text-red{
     color: red;
